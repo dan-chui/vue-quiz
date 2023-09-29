@@ -1,11 +1,23 @@
 <template>
   <div class="ctr">
-    <questions
-      v-if="questionsAnswered < questions.length"
-      :questions="questions"
-    />
-    <result v-else />
-    <button type="button" class="reset-btn">Reset</button>
+    <transition name="fade" mode="out-in">
+      <questions
+        v-if="questionsAnswered < questions.length"
+        :questions="questions"
+        :questionsAnswered="questionsAnswered"
+        @question-answered="questionAnswered"
+      />
+      <result v-else :results="results" :totalCorrect="totalCorrect" />
+    </transition>
+
+    <button
+      type="button"
+      class="reset-btn"
+      @click.prevent="reset"
+      v-if="this.questionsAnswered === questions.length"
+    >
+      Reset
+    </button>
   </div>
 </template>
 
@@ -22,9 +34,10 @@ export default {
   data() {
     return {
       questionsAnswered: 0,
+      totalCorrect: 0,
       questions: [
         {
-          q: "Which of the following statement best define Vue.js?",
+          q: "Which of the following statements best define Vue.js?",
           answers: [
             {
               text: "Vue.js is an open-source JavaScript library that is used for developing user interfaces.",
@@ -126,7 +139,7 @@ export default {
       results: [
         {
           min: 0,
-          max: 2,
+          max: 5,
           title: "Try again!",
           desc: "Do a little more studying and you may succeed!",
         },
@@ -138,6 +151,19 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    questionAnswered(is_correct) {
+      if (is_correct) {
+        this.totalCorrect++;
+      }
+
+      this.questionsAnswered++;
+    },
+    reset() {
+      this.questionsAnswered = 0;
+      this.totalCorrect = 0;
+    },
   },
 };
 </script>
