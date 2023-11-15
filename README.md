@@ -1,29 +1,55 @@
-# vue-quiz
+# Vue Quiz
 
-This template should help get you started developing with Vue 3 in Vite.
+## 💻 Project
+This app features multiple choice questions to test a person's knowledge of Vue.js
 
-## Recommended IDE Setup
+## 🚀 Technologies
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Vue.js
+- CSS
+- HTML
 
-## Customize configuration
+## 💫 Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Modern Framework**: Utilizing Vue.js enhance the game experience.
+- **UI/UX**: Clean User interface stylized using CSS.
+- **Question Bank**: A selection of multiple choice questions.
 
-## Project Setup
+---
+## Demo
 
-```sh
+Please visit (in a new tab): 
+
+---
+
+## 🌎 Getting Started
+
+### Installation
+
+Clone the repository:
+
+```
+https://github.com/dan-chui/vue-quiz
+```
+
+Then use the Windows Terminal: cd vue-quiz
+
+
+**Install dependencies:**
+
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Usage
+### To develop and make changes:
 
-```sh
+```
 npm run dev
 ```
 
-### Compile and Minify for Production
+### To deploy it yourself:
 
-```sh
+```
 npm run build
 ```
