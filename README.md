@@ -19,6 +19,7 @@ This app features multiple choice questions to test a person's knowledge of Vue.
 ## Demo
 
 Please visit (in a new tab): 
+https://vue-quiz-dan-chui.vercel.app/
 
 ---
 
